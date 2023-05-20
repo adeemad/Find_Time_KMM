@@ -52,3 +52,19 @@ object Deps {
 
     // TODO: Add Compose
 }
+
+//Next, add the Compose libraries.
+// These are libraries for building the new Jetpack Compose UI in Android
+object Compose {
+    const val ui = "androidx.compose.ui:ui:${Versions.compose_version}"
+    const val uiUtil = "androidx.compose.ui:ui-util:${Versions.compose_version}"
+    const val tooling = "androidx.compose.ui:ui-tooling:${Versions.compose_version}"
+    const val foundation = "androidx.compose.foundation:foundation:${Versions.compose_version}"
+    const val material = "androidx.compose.material:material:${Versions.compose_version}"
+    const val material_icons = "androidx.compose.material:material-icons-extended:${Versions.compose_version}"
+    const val runtime = "androidx.compose.runtime:runtime:${Versions.compose_version}"
+    const val compiler = "androidx.compose.compiler:compiler:${Versions.compose_version}"
+    const val runtime_livedata = "androidx.compose.runtime:runtime-livedata:${Versions.compose_version}"
+    const val foundationLayout = "androidx.compose.foundation:foundation-layout:${Versions.compose_version}"
+    const val activity = "androidx.activity:activity-compose:${Versions.activity_compose}"
+}
