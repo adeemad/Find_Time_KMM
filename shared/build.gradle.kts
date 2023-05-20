@@ -39,7 +39,14 @@ kotlin {
     //define the source sets. These use predefined variables
     sourceSets {
         //Define the commonMain and testing dependencies. Currently, commonMain has none
-        val commonMain by getting
+        val commonMain by getting {
+            dependencies {
+                // 1
+                implementation(Deps.JetBrains.datetime)
+                // 2
+                implementation(Deps.napier)
+            }
+        }
         val commonTest by getting {
             dependencies {
                 implementation(kotlin("test"))
