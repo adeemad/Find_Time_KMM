@@ -39,3 +39,16 @@ object Versions {
     const val junit5 = "1.5.10"
     const val frameworkName = "shared"
 }
+
+// This defines variables for the plugins and for some useful libraries.
+object Deps {
+    const val android_gradle_plugin = "com.android.tools.build:gradle:${Versions.android_gradle_plugin}"
+    const val kotlin_gradle_plugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.kotlin_gradle_plugin}"
+
+
+    const val junit = "junit:junit:${Versions.junit}"
+    const val material = "com.google.android.material:material:${Versions.material}"
+    const val napier = "io.github.aakira:napier:${Versions.napier}"
+
+    // TODO: Add Compose
+}
