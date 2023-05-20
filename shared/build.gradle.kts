@@ -1,10 +1,11 @@
+//Gradle can automatically read the constants defined within buildSrc.
 plugins {
     //The first plugin is for KMP and defines this module as a multiplatform module.
-    kotlin("multiplatform")
+    kotlin(multiplatform)
     //The next plugin is for iOS and brings in CocoaPods.
-    kotlin("native.cocoapods")
+    kotlin(cocopods)
     //The last plugin is for Android.You’ll use this to create an Android library for use in an Android app
-    id("com.android.library")
+    id(androidLib)
 }
 
 kotlin {
@@ -74,8 +75,8 @@ kotlin {
 //android section
 android {
     namespace = "com.adabdigital.findtime"
-    compileSdk = 33
+    compileSdk = Versions.compile_sdk
     defaultConfig {
-        minSdk = 24
+        minSdk = Versions.min_sdk
     }
 }
