@@ -1,10 +1,14 @@
 plugins {
+    //The first plugin is for KMP and defines this module as a multiplatform module.
     kotlin("multiplatform")
+    //The next plugin is for iOS and brings in CocoaPods.
     kotlin("native.cocoapods")
+    //The last plugin is for Android.You’ll use this to create an Android library for use in an Android app
     id("com.android.library")
 }
 
 kotlin {
+    // define an android target
     android {
         compilations.all {
             kotlinOptions {
@@ -12,10 +16,14 @@ kotlin {
             }
         }
     }
+    //defines a target for the iOS simulator on x86_64 platforms
     iosX64()
+    //defines a target for iOS on ARM64 platforms.
     iosArm64()
     iosSimulatorArm64()
 
+    //Defines the details for building the CocoaPods Podfile
+    //The main thing here is the baseName, which is shared, and the path to the Podfile.
     cocoapods {
         summary = "Some description for the Shared Module"
         homepage = "Link to the Shared Module homepage"
