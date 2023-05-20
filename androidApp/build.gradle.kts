@@ -1,15 +1,21 @@
+import Deps.Compose.activity
+import Deps.Compose.foundation
+import Deps.Compose.tooling
+import Deps.Compose.ui
+import Deps.material
+
 plugins {
-    id("com.android.application")
-    kotlin("android")
+    id(androidApp)
+    kotlin(androidPlugin)
 }
 
 android {
     namespace = "com.adabdigital.findtime.android"
-    compileSdk = 33
+    compileSdk = Versions.compile_sdk
     defaultConfig {
         applicationId = "com.adabdigital.findtime.android"
-        minSdk = 24
-        targetSdk = 33
+        minSdk = Versions.min_sdk
+        targetSdk = Versions.target_sdk
         versionCode = 1
         versionName = "1.0"
     }
@@ -39,11 +45,20 @@ android {
 }
 
 dependencies {
+
+    // napier, a multiplatform library for logging, and the Google material library
+    with(Deps) {
+        implementation(napier)
+        implementation(material)
+    }
+
     implementation(project(":shared"))
-    implementation("androidx.compose.ui:ui:1.4.0")
-    implementation("androidx.compose.ui:ui-tooling:1.4.0")
-    implementation("androidx.compose.ui:ui-tooling-preview:1.4.0")
-    implementation("androidx.compose.foundation:foundation:1.4.0")
-    implementation("androidx.compose.material:material:1.4.0")
-    implementation("androidx.activity:activity-compose:1.7.0")
+    with(Deps.Compose) {
+        implementation(ui)
+        implementation(tooling)
+        implementation(tooling_preview)
+        implementation(foundation)
+        implementation(material)
+        implementation(activity)
+    }
 }
