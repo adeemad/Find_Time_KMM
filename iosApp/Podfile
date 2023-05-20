@@ -1,3 +1,6 @@
+# Cocoa pods dependency management systems
+# The most important part is the pod 'shared', :path => '../shared' section.
+# This defines the shared framework that KMP will create and that you can use in your iOS apps.
 target 'iosApp' do
   use_frameworks!
   platform :ios, '14.1'
