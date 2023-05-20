@@ -65,6 +65,13 @@ object Deps {
         const val foundationLayout = "androidx.compose.foundation:foundation-layout:${Versions.compose_version}"
         const val activity = "androidx.activity:activity-compose:${Versions.activity_compose}"
     }
+
+    // libraries for coroutines
+    object Coroutines {
+        const val common = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.coroutines}"
+        const val android = "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.coroutines}"
+        const val test = "org.jetbrains.kotlinx:kotlinx-coroutines-test:${Versions.coroutines}"
+    }
 }
 
 
