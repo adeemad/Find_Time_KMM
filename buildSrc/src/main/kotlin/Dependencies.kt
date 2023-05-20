@@ -72,6 +72,14 @@ object Deps {
         const val android = "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.coroutines}"
         const val test = "org.jetbrains.kotlinx:kotlinx-coroutines-test:${Versions.coroutines}"
     }
+
+    //These are a few libraries from JetBrains — the developers of KMP — for multiplatform datetime handling,
+    // as well as Desktop Compose, which will be introduced later.
+    object JetBrains {
+        const val datetime = "org.jetbrains.kotlinx:kotlinx-datetime:${Versions.kotlinxDateTime}"
+        const val uiDesktop = "org.jetbrains.compose.ui:ui-desktop:${Versions.desktop_compose_plugin}"
+        const val uiUtil = "org.jetbrains.compose.ui:ui-util:${Versions.desktop_compose_plugin}"
+    }
 }
 
 
