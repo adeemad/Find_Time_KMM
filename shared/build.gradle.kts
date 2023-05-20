@@ -34,16 +34,22 @@ kotlin {
             baseName = "shared"
         }
     }
-    
+
+    //define the source sets. These use predefined variables
     sourceSets {
+        //Define the commonMain and testing dependencies. Currently, commonMain has none
         val commonMain by getting
         val commonTest by getting {
             dependencies {
                 implementation(kotlin("test"))
             }
         }
+
+        //Define the commonMain and testing dependencies. Currently, commonMain has none
         val androidMain by getting
         val androidUnitTest by getting
+
+        //Define the commonMain and testing dependencies. Currently, commonMain has none
         val iosX64Main by getting
         val iosArm64Main by getting
         val iosSimulatorArm64Main by getting
@@ -65,6 +71,7 @@ kotlin {
     }
 }
 
+//android section
 android {
     namespace = "com.adabdigital.findtime"
     compileSdk = 33
